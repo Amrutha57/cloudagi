@@ -2,6 +2,7 @@
 
 import { Header } from "@/app/components/header";
 import { Footer } from "../components/footer";
+import Image from "next/image";
 
 export default function AboutUsPage() {
   return (
@@ -67,7 +68,7 @@ export default function AboutUsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Image */}
           <div className="flex justify-center">
-            <img
+            <Image
               src="/img.jpg" /* Replace with your actual image path */
               alt="Our Approach Illustration"
               className="rounded-3xl shadow-lg max-w-full h-auto"
@@ -95,9 +96,10 @@ export default function AboutUsPage() {
             <div>
               <div className="text-5xl font-bold text-gray-700 dark:text-gray-300 mb-4">3</div>
               <h3 className="text-2xl font-semibold mb-2 text-gray-900 dark:text-white">Launch & Optimization</h3>
-              <p className="text-xl font-light leading-relaxed text-gray-700 dark:text-gray-300 max-w-xl">
-                We don't just deliver and disappear. We partner with you through launch and beyond, continuously optimizing and evolving your digital assets to maximize their impact.
-              </p>
+           <p className="text-xl font-light leading-relaxed text-gray-700 dark:text-gray-300 max-w-xl">
+  We don&apos;t just deliver and disappear. We partner with you through launch and beyond, continuously optimizing and evolving your digital assets to maximize their impact.
+</p>
+
             </div>
           </div>
         </div>

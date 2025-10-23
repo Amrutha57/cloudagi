@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
@@ -62,7 +63,7 @@ export function TeamGrid({
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
-                  <img
+                  <Image
                     alt={member.name}
                     src={getAvatarUrl(member.avatar, 400)}
                     width={400}

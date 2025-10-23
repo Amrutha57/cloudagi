@@ -1,14 +1,12 @@
 "use client";
 
 import { LogoCloudAnimated } from "./components/logoanimated";
-//import { ThemeTogglerButton } from "animate-ui";
-import { AnimatedThemeToggler } from "../context/themetoggle"
+
 import { InteractiveHoverButton } from "./components/interactive-hover"
 import { TextAnimate } from "../app/components/text-animate"
 
 import { SmoothCursor } from "./components/smooth-cursor"
-//import { ThemeTogglerButton } from "animate-ui/components/buttons/theme-toggler";
-import { useTheme } from "../context/themecontext";
+
 import { Footer } from "../app/components/footer";
 import { StatsCards } from "../app/components/stats";
 import { Header } from "@/app/components/header";

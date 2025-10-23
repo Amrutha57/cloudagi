@@ -72,7 +72,7 @@ const getDefaultCards = (): Card[] => {
   ];
 };
 
-const smoothEasing = [0.4, 0.0, 0.2, 1];
+//const smoothEasing = [0.4, 0.0, 0.2, 1];
 
 export interface ExpandableCardsProps {
   cards?: Card[];
