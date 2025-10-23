@@ -71,7 +71,7 @@ export function Header() {
           <Button variant="outline" onClick={() => router.push("/signin")}>
             Sign In
           </Button>
-          <Button onClick={() => router.push("/get-started")}>Get Started</Button>
+          <Button onClick={() => router.push("/getStarted")}>Get Started</Button>
 
           {/* Theme toggle button added here */}
           <AnimatedThemeToggler />

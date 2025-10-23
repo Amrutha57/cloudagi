@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <>
      <Header />
-    <main className="relative flex size-full min-h-screen w-full items-center justify-center p-4">
+    <main className="relative flex size-full min-h-screen w-full items-center justify-center p-4 ">
       <div className="mx-auto w-full max-w-5xl">
         <ContactCard
           contactInfo={[

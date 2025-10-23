@@ -1,12 +1,15 @@
+
+
+
 "use client"
 import { Footer } from "../components/footer";
-
+import { TeamGrid } from "./teamgrid";
 import { useState } from "react"
 import { Header } from "@/app/components/header";
 import { TextAnimate } from "../components/text-animate"
 import ExpandableCards, {
   type Card,
-} from "@/components/smoothui/ui/ExpandableCards"
+} from "../components/ExpandableCards"
 //import { getAllPeople, getAvatarUrl } from "@/app/doc/data/peopleData"
 
 const ExpandableCardsDemo = () => {
@@ -72,13 +75,20 @@ const ExpandableCardsDemo = () => {
    <>
   <Header />
   <div className="max-w-4xl mx-auto my-16 px-6 text-center">
-    <h2 className="text-4xl font-semibold mb-6">    <TextAnimate animation="slideLeft" by="character">
-Our Services</TextAnimate></h2>
-    <p className="text-2xl font-light leading-relaxed text-gray-700 max-w-3xl mx-auto">
-    <TextAnimate animation="blurIn" >We provide cutting-edge AI solutions and intelligent agents that automate processes,
-      enhance decision-making, and drive innovation. From custom AI tools to full-scale
-      integrations, our services help you stay ahead in a fast-changing world.</TextAnimate>  
-    </p>
+    <h2 className="text-4xl font-semibold mb-6">
+  <TextAnimate animation="slideLeft" by="character" as="span">
+    Our Services
+  </TextAnimate>
+</h2>
+
+<p className="text-2xl font-light leading-relaxed text-gray-700 max-w-3xl mx-auto">
+  <TextAnimate animation="blurIn" as="span">
+    We provide cutting-edge AI solutions and intelligent agents that automate processes,
+    enhance decision-making, and drive innovation. From custom AI tools to full-scale
+    integrations, our services help you stay ahead in a fast-changing world.
+  </TextAnimate>
+</p>
+
   </div>
 
   <div>
@@ -89,6 +99,8 @@ Our Services</TextAnimate></h2>
     />
   </div>
 
+
+   <TeamGrid />
   <section className="flex justify-center py-20 px-6 bg-gray-100 dark:bg-gray-900">
   <div className="relative max-w-4xl w-full bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-12 text-center">
     <h2 className="text-4xl font-semibold mb-6 text-gray-900 dark:text-gray-100">
@@ -129,3 +141,4 @@ Our Services</TextAnimate></h2>
 }
 
 export default ExpandableCardsDemo
+

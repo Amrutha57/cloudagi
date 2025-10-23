@@ -61,7 +61,7 @@ export default function AboutUsPage() {
         </section>
       </div>
 
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-6xl mx-auto px-6 py-20 dark:bg-gray-800">
         <h2 className="text-4xl font-semibold text-center mb-16 text-gray-900 dark:text-white">Our Approach</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

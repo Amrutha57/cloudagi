@@ -1,5 +1,6 @@
 "use client";
 
+import { LogoCloudAnimated } from "./components/logoanimated";
 //import { ThemeTogglerButton } from "animate-ui";
 import { AnimatedThemeToggler } from "../context/themetoggle"
 import { InteractiveHoverButton } from "./components/interactive-hover"
@@ -9,64 +10,64 @@ import { SmoothCursor } from "./components/smooth-cursor"
 //import { ThemeTogglerButton } from "animate-ui/components/buttons/theme-toggler";
 import { useTheme } from "../context/themecontext";
 import { Footer } from "../app/components/footer";
+import { StatsCards } from "../app/components/stats";
 import { Header } from "@/app/components/header";
 import { useState } from "react";
 import ExpandableCards, { type Card } from "../app/components/ExpandableCards";
-
-const demoCards: Card[] = [
-  {
-    id: 1,
-    title: "web development",
-    image:
-      "https://res.cloudinary.com/dyzxnud9z/image/upload/w_400,ar_1:1,c_fill,g_auto/v1758210208/smoothui/summer-opening.webp",
-    content:
-      "Join us for the Summer Opening event, where we celebrate the start of a vibrant season filled with art and culture.",
-    author: {
-      name: "Eduardo Calvo",
-      role: "CEO & Founder",
-      image: ""
+ const demoCards: Card[] = [
+    {
+      id: 1,
+      title: "AI Development Services",
+      image:
+        "/aidev.png",
+      content:
+        "Help businesses define AI adoption strategies and roadmap aligned with their goals.",
+      author: {
+        name:  "Amrutha",
+        role: "CEO & Founder",
+        image: "/aidev.png"
+      },
     },
-  },
-  {
-    id: 2,
-    title: "Fashion",
-    image:
-      "https://res.cloudinary.com/dyzxnud9z/image/upload/w_400,ar_1:1,c_fill,g_auto/v1758210208/smoothui/fashion.webp",
-    content:
-      "Explore the latest trends in fashion at our exclusive showcase, featuring renowned designers and unique styles.",
-    author: {
-      name: "Sarah Chen",
-      role: "Head of Design",
-      image: ""
+    {
+      id: 2,
+      title: "AI Integration & Automation",
+      image:
+        "/aiinte.png",
+      content:
+        "Integrate AI agents to automate repetitive business workflows and improve operational efficiency.",
+      author: {
+        name:  "Sarah Chen",
+        role:  "Head of Design",
+        image: "/aiinte.png"
+      },
     },
-  },
-  {
-    id: 3,
-    title: "Gallery Art",
-    image:
-      "https://res.cloudinary.com/dyzxnud9z/image/upload/w_400,ar_1:1,c_fill,g_auto/v1758210809/smoothui/galleryart.webp",
-    content:
-      "Immerse yourself in the world of art at our gallery, showcasing stunning pieces from emerging and established artists.",
-    author: {
-      name: "Marcus Johnson",
-      role: "Lead Developer",
-      image: "",
+    {
+      id: 3,
+      title: "AI Consulting & Research",
+      image:
+        "/airesearch.png",
+      content:
+        "AI models tailored to specific business needs, such as recommendation systems, fraud detection, or predictive analytics.",
+      author: {
+        name: "Marcus Johnson",
+        role: "Lead Developer",
+        image: "/airesearch.png",
+      },
     },
-  },
-  {
-    id: 4,
-    title: "Dreams",
-    image:
-      "https://res.cloudinary.com/dyzxnud9z/image/upload/w_400,ar_1:1,c_fill,g_auto/v1758210809/smoothui/dreams.webp",
-    content:
-      "Join us on a journey through dreams, exploring the subconscious and the art of dreaming.",
-    author: {
-      name: "Emily Rodriguez",
-      role: "Product Manager",
-      image: ""
+    {
+      id: 4,
+      title: "Emerging AI Technologies",
+      image:
+        "/eco.png",
+      content:
+        "Build solutions with generative models for content creation, design, code generation, and more.",
+      author: {
+        name:  "Emily Rodriguez",
+        role:  "Product Manager",
+        image: "/eco.png"
+      },
     },
-  },
-];
+  ]
 
 export default function Page() {
   const [selected, setSelected] = useState<number | null>(null);
@@ -102,7 +103,10 @@ export default function Page() {
 <InteractiveHoverButton>Schedule Call</InteractiveHoverButton>
           </div>
         </div>
+        
       </div>
+
+      <LogoCloudAnimated />
 
       {/* Expandable Cards Below Video */}
       <section className="max-w-6xl mx-auto px-6 py-16">
@@ -114,7 +118,39 @@ export default function Page() {
              onSelect={setSelected}
            />
       </section>
+       <StatsCards />
 
+  <section className="flex justify-center py-20 px-6 bg-gray-100 dark:bg-gray-900">
+  <div className="relative max-w-4xl w-full bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-12 text-center">
+    <h2 className="text-4xl font-semibold mb-6 text-gray-900 dark:text-gray-100">
+      Ready to transform your business?
+    </h2>
+
+    <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
+      Partner with us to build innovative AI solutions that drive growth and success.
+    </p>
+
+    {/* Floating Buttons */}
+    <div className="flex justify-center gap-8 absolute left-1/2 -bottom-10 transform -translate-x-1/2">
+      <a
+        href="https://labfox.studio/contact"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-6 py-3 bg-gray-700 dark:bg-gray-600 text-white rounded-full shadow-lg hover:bg-gray-800 dark:hover:bg-gray-700 transition font-semibold"
+      >
+        Contact Us
+      </a>
+      <a
+        href="https://calendly.com/founders-labfox/30min"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-6 py-3 bg-gray-700 dark:bg-gray-600 text-white rounded-full shadow-lg hover:bg-gray-900 dark:hover:bg-gray-800 transition font-semibold"
+      >
+        Schedule Call
+      </a>
+    </div>
+  </div>
+</section>
       <Footer/>
     </>
   );

@@ -199,13 +199,16 @@ export default function ExpandableCards({
                     {card.author && (
                       <div className="mt-4 flex items-center gap-3">
                         <div className="bg-primary h-12 w-12 overflow-hidden rounded-full border">
-                          <Image
-                            src={card.author.image}
-                            alt={card.author.name}
-                            width={48}
-                            height={48}
-                            className="h-full w-full object-cover"
-                          />
+                         <Image
+  src={card.author?.image && card.author.image.trim() !== "" 
+    ? card.author.image 
+    : "/placeholder.svg"}
+  alt={card.author?.name || "Author image"}
+  width={48}
+  height={48}
+  className="h-full w-full object-cover"
+/>
+
                         </div>
                         <div>
                           <p className="text-black font-semibold">
@@ -225,5 +228,5 @@ export default function ExpandableCards({
         ))}
       </div>
     </div>
-  );
+  );   
 }
