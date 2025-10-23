@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { AnimatedThemeToggler } from "../components/themetoggle";
-import { WordmarkIcon } from "./logo";
+import { CloudAgiLogo } from "./logo";
 import { MenuToggleIcon } from "./menu-toggle-icon";
 import { Button, buttonVariants } from "./ui/button";
 import { useScroll } from "@/hooks/use-scroll";
@@ -48,7 +48,7 @@ export function Header() {
         {/* Left aligned: Logo */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
-            <WordmarkIcon className="h-6 md:h-7" />
+            <CloudAgiLogo className="h-6 md:h-7" />
           </Link>
         </div>
 

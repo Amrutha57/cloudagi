@@ -1,9 +1,11 @@
 "use client";
-import { TextAnimate } from "../components/text-animate"
+
 
 import { ChevronLeftIcon, GithubIcon } from "lucide-react";
 import React from "react";
-import { WordmarkIcon } from "../components/logo";
+
+import { CloudAgiLogo } from "../components/logo";
+
 import { Button } from "../components/ui/button";
 import { Particles } from "../components/ui/shadcn-io/particles";
 import { useRouter } from "next/navigation";
@@ -33,7 +35,7 @@ export default function AuthPage() {
         </Button>
 
         <div className="mx-auto space-y-4 sm:w-sm">
-          <WordmarkIcon className="h-5" />
+          <CloudAgiLogo className="h-5" />
           <div className="flex flex-col space-y-1">
             <h1 className="font-bold text-2xl tracking-wide">Sign In or Join Now!</h1>
             <p className="text-base text-muted-foreground">login or create your asme account.</p>
