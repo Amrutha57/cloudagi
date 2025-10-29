@@ -1,4 +1,7 @@
 "use client";
+"use client"
+
+//import { MorphSurface } from "@/components/smoothui/ui/AiInput"
 
 import { LogoCloudAnimated } from "./components/logoanimated";
 
@@ -149,6 +152,10 @@ export default function Page() {
     </div>
   </div>
 </section>
+
+
+     
+
       <Footer/>
     </>
   );

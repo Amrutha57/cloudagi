@@ -8,9 +8,9 @@ import { AnimatedThemeToggler } from "../components/themetoggle";
 import { CloudAgiLogo } from "./logo";
 import { MenuToggleIcon } from "./menu-toggle-icon";
 import { Button, buttonVariants } from "./ui/button";
-import { useScroll } from "@/hooks/use-scroll";
+import { useScroll } from "@/components/smoothui/ui/use-scroll";
 import { cn } from "@/app/components/ui/shadcn-io/particles/lib/utils";
-
+import Blog from "../Blogs/page";
 export function Header() {
   const [open, setOpen] = React.useState(false);
   const scrolled = useScroll(10);
@@ -20,7 +20,8 @@ export function Header() {
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
     { label: "About Us", href: "/about" },
-    { label: "Contact", href: "/contact" },
+     //{ label: "Blogs", href: "/contact" },
+    { label: "Blogs", href: "/Blogs" },
   ];
 
   React.useEffect(() => {

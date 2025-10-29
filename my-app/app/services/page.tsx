@@ -3,7 +3,7 @@
 
 "use client"
 import { Footer } from "../components/footer";
-import { TeamGrid } from "./teamgrid";
+//import { TeamGrid } from "../components/teamgrid";
 import { useState } from "react"
 import { Header } from "@/app/components/header";
 import { TextAnimate } from "../components/text-animate"
@@ -100,7 +100,7 @@ const ExpandableCardsDemo = () => {
   </div>
 
 
-   <TeamGrid />
+ 
   <section className="flex justify-center py-20 px-6 bg-gray-100 dark:bg-gray-900">
   <div className="relative max-w-4xl w-full bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-12 text-center">
     <h2 className="text-4xl font-semibold mb-6 text-gray-900 dark:text-gray-100">

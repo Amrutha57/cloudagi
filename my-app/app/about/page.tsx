@@ -68,7 +68,7 @@ export default function AboutUsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Image */}
           <div className="flex justify-center">
-            <Image
+            <img
               src="/img.jpg" /* Replace with your actual image path */
               alt="Our Approach Illustration"
               className="rounded-3xl shadow-lg max-w-full h-auto"
