@@ -80,7 +80,7 @@ export default function Page() {
 
       <div className="relative w-full" style={{ height: "90vh" }}>
         <video
-          src="/homevideo.mp4"
+          src="/home.mp4"
           autoPlay
           muted
           loop

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Header } from "@/app/components/header";
 import { TextAnimate } from "../components/text-animate";
 import { Particles } from "../components/particles"
+import Link from "next/link";
 
 import {
   Card,
@@ -16,7 +17,8 @@ import {
   CardFooter,
 } from "../components/ui/card";
 import { Button } from "../components/ui/button";
-import { FaClock, FaArrowRight , FaSearch } from "react-icons/fa";
+import { FaClock, FaArrowRight, FaSearch } from "react-icons/fa";
+//import VibeCodingBlog from "../bloglinks/page"
 
 // Card data array declared outside the component
 const cardData = [
@@ -27,6 +29,7 @@ const cardData = [
     description: "Short summary goes here for card 1.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/bloglinks",
   },
   {
     id: 2,
@@ -35,6 +38,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
   // Add all 16 card objects here similarly...
    {
@@ -44,6 +48,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
    {
     id: 4,
@@ -52,6 +57,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
    {
     id: 5,
@@ -60,6 +66,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
    {
     id: 6,
@@ -68,6 +75,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
    {
     id: 7,
@@ -76,6 +84,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
    {
     id: 8,
@@ -84,6 +93,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
    {
     id: 9,
@@ -92,6 +102,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
    {
     id: 10,
@@ -100,6 +111,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
    {
     id: 11,
@@ -108,6 +120,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
    {
     id: 12,
@@ -116,6 +129,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
    {
     id: 13,
@@ -124,6 +138,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
    {
     id: 14,
@@ -132,6 +147,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
    {
     id: 15,
@@ -140,6 +156,7 @@ const cardData = [
     description: "Short summary goes here for card 2.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
 
   {
@@ -149,6 +166,7 @@ const cardData = [
     description: "Short summary goes here for card 16.",
     date: "2025-10-29",
     read: "5 min read",
+     link: "/blog/ai-integration",
   },
 ];
 
@@ -199,11 +217,22 @@ const Blog = () => {
                 <CardDescription className="mb-2">{card.description}</CardDescription>
                 <div className="text-xs text-gray-400 mt-auto mb-2">{card.date}</div>
               </CardContent>
-              <CardFooter className="p-4 pt-0">
-                <Button variant="outline" className="w-full flex items-center justify-center">
-                  Read More <FaArrowRight  />
-                </Button>
+              
+ <CardFooter className="p-4 pt-0">
+                <Link
+                  href={card.link}
+                  target={card.link.startsWith("http") ? "_blank" : "_self"}
+                  className="w-full"
+                >
+                  <Button
+                    variant="outline"
+                    className="w-full flex items-center justify-center"
+                  >
+                    Read More <FaArrowRight className="ml-2" />
+                  </Button>
+                </Link>
               </CardFooter>
+
             </Card>
           ))}
         </div>
