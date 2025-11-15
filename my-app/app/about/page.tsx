@@ -23,7 +23,7 @@ export default function AboutUsPage() {
         </div>
 
         {/* Our Core Values Section */}
-        <section className="w-full bg-gray-300 dark:bg-gray-800 py-20 px-6">
+        <section className="w-full bg-gray-100 dark:bg-gray-900 py-20 px-6">
           <div className="max-w-6xl mx-auto text-center mb-12">
             <h2 className="text-4xl font-semibold text-gray-900 dark:text-white">Our Core Values</h2>
           </div>

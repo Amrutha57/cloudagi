@@ -1,0 +1,568 @@
+{
+  "designSystem": {
+    "name": "CloudAGI Design System",
+    "version": "1.0.0",
+    "description": "A modern, sophisticated design system with smooth animations, elegant typography, and a refined color palette optimized for AI-powered applications.",
+    
+    "designPhilosophy": {
+      "corePrinciples": [
+        "Minimalism with Purpose - Clean interfaces that prioritize content and functionality",
+        "Motion as Communication - Animations guide users and provide feedback, never distract",
+        "Accessibility First - All interactions must be accessible and respect reduced motion preferences",
+        "Responsive by Default - Mobile-first approach with seamless scaling to desktop",
+        "Dark Mode Native - Dark mode is not an afterthought but a core design consideration",
+        "Performance Conscious - Smooth 60fps animations with optimized rendering"
+      ],
+      "aesthetic": "Modern minimalist with subtle luxury touches. Think Apple meets Stripe - clean, professional, with carefully crafted micro-interactions.",
+      "personality": "Sophisticated, approachable, innovative, trustworthy"
+    },
+
+    "colorSystem": {
+      "colorSpace": "OKLCH",
+      "philosophy": "Uses OKLCH color space for perceptually uniform colors and better dark mode transitions. Colors maintain their perceived brightness and saturation across themes.",
+      
+      "lightMode": {
+        "background": {
+          "primary": "oklch(1 0 0)",
+          "description": "Pure white background for maximum contrast and clarity"
+        },
+        "foreground": {
+          "primary": "oklch(0.145 0 0)",
+          "description": "Near-black text for excellent readability"
+        },
+        "card": {
+          "base": "oklch(1 0 0)",
+          "foreground": "oklch(0.145 0 0)"
+        },
+        "primary": {
+          "base": "oklch(0.205 0 0)",
+          "foreground": "oklch(0.985 0 0)",
+          "description": "Dark primary for buttons and CTAs"
+        },
+        "secondary": {
+          "base": "oklch(0.97 0 0)",
+          "foreground": "oklch(0.205 0 0)"
+        },
+        "muted": {
+          "base": "oklch(0.97 0 0)",
+          "foreground": "oklch(0.556 0 0)",
+          "description": "Subtle backgrounds for less prominent elements"
+        },
+        "accent": {
+          "base": "oklch(0.97 0 0)",
+          "foreground": "oklch(0.205 0 0)"
+        },
+        "border": {
+          "base": "oklch(0.922 0 0)",
+          "description": "Light gray borders for subtle separation"
+        },
+        "destructive": {
+          "base": "oklch(0.577 0.245 27.325)",
+          "description": "Warm red for errors and destructive actions"
+        }
+      },
+      
+      "darkMode": {
+        "background": {
+          "primary": "oklch(0.145 0 0)",
+          "description": "Deep dark background (#121212 equivalent)"
+        },
+        "foreground": {
+          "primary": "oklch(0.985 0 0)",
+          "description": "Near-white text for dark backgrounds"
+        },
+        "card": {
+          "base": "oklch(0.205 0 0)",
+          "foreground": "oklch(0.985 0 0)"
+        },
+        "primary": {
+          "base": "oklch(0.922 0 0)",
+          "foreground": "oklch(0.205 0 0)",
+          "description": "Light primary for dark mode contrast"
+        },
+        "secondary": {
+          "base": "oklch(0.269 0 0)",
+          "foreground": "oklch(0.985 0 0)"
+        },
+        "muted": {
+          "base": "oklch(0.269 0 0)",
+          "foreground": "oklch(0.708 0 0)"
+        },
+        "border": {
+          "base": "oklch(1 0 0 / 10%)",
+          "description": "Subtle white borders with low opacity"
+        },
+        "destructive": {
+          "base": "oklch(0.704 0.191 22.216)",
+          "description": "Brighter red for dark mode visibility"
+        }
+      },
+      
+      "usage": {
+        "background": "Use for page backgrounds and main containers",
+        "foreground": "Use for primary text content",
+        "card": "Use for card components, modals, and elevated surfaces",
+        "primary": "Use for primary actions, buttons, and brand elements",
+        "secondary": "Use for secondary actions and less prominent elements",
+        "muted": "Use for subtle backgrounds, disabled states, and tertiary content",
+        "accent": "Use for hover states and interactive highlights",
+        "border": "Use for borders, dividers, and subtle separations",
+        "destructive": "Use for errors, warnings, and destructive actions"
+      }
+    },
+
+    "typography": {
+      "fontFamilies": {
+        "sans": {
+          "name": "Geist Sans",
+          "variable": "--font-geist-sans",
+          "source": "Google Fonts (Next.js)",
+          "usage": "Primary font for all UI text, headings, and body content",
+          "characteristics": "Modern, clean, highly legible, geometric sans-serif"
+        },
+        "mono": {
+          "name": "Geist Mono",
+          "variable": "--font-geist-mono",
+          "source": "Google Fonts (Next.js)",
+          "usage": "Code blocks, technical content, and monospace requirements",
+          "characteristics": "Technical, precise, developer-friendly"
+        }
+      },
+      
+      "scale": {
+        "xs": "0.75rem (12px) - Small labels, captions",
+        "sm": "0.875rem (14px) - Secondary text, descriptions",
+        "base": "1rem (16px) - Body text, default size",
+        "lg": "1.125rem (18px) - Emphasized body text",
+        "xl": "1.25rem (20px) - Small headings",
+        "2xl": "1.5rem (24px) - Section headings",
+        "3xl": "1.875rem (30px) - Page headings",
+        "4xl": "2.25rem (36px) - Hero headings",
+        "5xl": "3rem (48px) - Large hero headings",
+        "6xl": "3.75rem (60px) - Extra large hero headings"
+      },
+      
+      "weights": {
+        "light": "300 - Rarely used, for very subtle emphasis",
+        "normal": "400 - Body text, default weight",
+        "medium": "500 - Slightly emphasized text",
+        "semibold": "600 - Headings, important labels",
+        "bold": "700 - Strong emphasis, hero headings"
+      },
+      
+      "lineHeight": {
+        "tight": "1.25 - Headings",
+        "normal": "1.5 - Body text",
+        "relaxed": "1.75 - Long-form content"
+      },
+      
+      "letterSpacing": {
+        "normal": "0 - Default",
+        "wide": "0.025em - Uppercase labels, small text",
+        "wider": "0.05em - Headings, emphasis"
+      }
+    },
+
+    "spacing": {
+      "scale": "Tailwind CSS spacing scale (0.25rem increments)",
+      "baseUnit": "0.25rem (4px)",
+      "commonValues": {
+        "xs": "0.25rem (4px) - Tight spacing",
+        "sm": "0.5rem (8px) - Small gaps",
+        "md": "1rem (16px) - Default spacing",
+        "lg": "1.5rem (24px) - Comfortable spacing",
+        "xl": "2rem (32px) - Section spacing",
+        "2xl": "3rem (48px) - Large section spacing",
+        "3xl": "4rem (64px) - Hero spacing",
+        "4xl": "5rem (80px) - Extra large spacing"
+      },
+      "usage": {
+        "componentPadding": "p-4 to p-8 (16px-32px) for cards and containers",
+        "sectionSpacing": "py-16 to py-32 (64px-128px) for major sections",
+        "elementGaps": "gap-2 to gap-6 (8px-24px) for flex/grid layouts",
+        "containerMaxWidth": "max-w-5xl to max-w-7xl (1024px-1280px) for content containers"
+      }
+    },
+
+    "borderRadius": {
+      "base": "0.625rem (10px)",
+      "scale": {
+        "sm": "calc(var(--radius) - 4px) - 6px - Small elements, badges",
+        "md": "calc(var(--radius) - 2px) - 8px - Default buttons, inputs",
+        "lg": "var(--radius) - 10px - Cards, containers",
+        "xl": "calc(var(--radius) + 4px) - 14px - Large cards, modals",
+        "2xl": "1rem (16px) - Extra large containers",
+        "3xl": "1.5rem (24px) - Hero sections, special containers",
+        "full": "9999px - Pills, rounded buttons, avatars"
+      },
+      "usage": {
+        "buttons": "rounded-md to rounded-full depending on style",
+        "cards": "rounded-xl to rounded-2xl (12px-16px)",
+        "inputs": "rounded-md (8px)",
+        "modals": "rounded-2xl to rounded-3xl (16px-24px)",
+        "badges": "rounded-full or rounded-md"
+      }
+    },
+
+    "shadows": {
+      "philosophy": "Subtle, layered shadows that provide depth without being heavy",
+      "levels": {
+        "xs": "shadow-xs - Minimal shadow for subtle elevation",
+        "sm": "shadow-sm - Small elements, inputs",
+        "md": "shadow-md - Cards, containers",
+        "lg": "shadow-lg - Elevated cards, modals",
+        "xl": "shadow-xl - Floating elements, dropdowns",
+        "2xl": "shadow-2xl - Maximum elevation"
+      },
+      "special": {
+        "backdropBlur": "backdrop-blur-lg - For glassmorphism effects on headers and overlays",
+        "ring": "ring-[3px] ring-ring/50 - Focus states with subtle ring",
+        "glow": "Custom glow effects for interactive elements on hover"
+      }
+    },
+
+    "layout": {
+      "container": {
+        "maxWidths": {
+          "sm": "640px - Small content",
+          "md": "768px - Medium content",
+          "lg": "1024px - Large content",
+          "xl": "1280px - Extra large content",
+          "2xl": "1536px - Maximum content width"
+        },
+        "padding": {
+          "mobile": "px-4 to px-6 (16px-24px)",
+          "desktop": "px-6 to px-24 (24px-96px)"
+        }
+      },
+      "grid": {
+        "columns": "1 column mobile, 2-4 columns tablet, 4-6 columns desktop",
+        "gap": "gap-4 to gap-8 (16px-32px) depending on content density"
+      },
+      "sections": {
+        "verticalSpacing": "py-16 to py-32 (64px-128px)",
+        "horizontalSpacing": "px-4 to px-6 on mobile, px-6 to px-24 on desktop"
+      }
+    },
+
+    "components": {
+      "button": {
+        "philosophy": "Clear hierarchy with distinct variants for different action importance",
+        "variants": {
+          "default": {
+            "style": "bg-primary text-primary-foreground",
+            "usage": "Primary actions, CTAs",
+            "hover": "hover:bg-primary/90 - Slight darkening"
+          },
+          "outline": {
+            "style": "border bg-background shadow-xs",
+            "usage": "Secondary actions",
+            "hover": "hover:bg-accent hover:text-accent-foreground",
+            "darkMode": "dark:bg-input/30 dark:border-input"
+          },
+          "secondary": {
+            "style": "bg-secondary text-secondary-foreground",
+            "usage": "Tertiary actions",
+            "hover": "hover:bg-secondary/80"
+          },
+          "ghost": {
+            "style": "No background, transparent",
+            "usage": "Navigation links, subtle actions",
+            "hover": "hover:bg-accent hover:text-accent-foreground"
+          },
+          "destructive": {
+            "style": "bg-destructive text-white",
+            "usage": "Delete, remove, destructive actions",
+            "hover": "hover:bg-destructive/90"
+          }
+        },
+        "sizes": {
+          "sm": "h-8 px-3 - Compact buttons",
+          "default": "h-9 px-4 - Standard buttons",
+          "lg": "h-10 px-6 - Large buttons",
+          "icon": "size-9 - Icon-only buttons"
+        },
+        "interactions": {
+          "focus": "focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+          "transition": "transition-all - Smooth state changes",
+          "disabled": "disabled:opacity-50 disabled:pointer-events-none"
+        },
+        "special": {
+          "interactiveHover": "Custom button with animated dot and sliding text effect",
+          "roundedFull": "rounded-full - For pill-shaped buttons"
+        }
+      },
+
+      "card": {
+        "philosophy": "Elevated surfaces that group related content with subtle depth",
+        "base": {
+          "style": "bg-card text-card-foreground rounded-xl border shadow-sm",
+          "padding": "p-6 to p-8",
+          "gap": "gap-6 for internal spacing"
+        },
+        "variants": {
+          "default": "Standard card with border and shadow",
+          "elevated": "shadow-lg - For important cards",
+          "interactive": "hover:shadow-xl hover:scale-105 - For clickable cards",
+          "gradient": "bg-gradient-to-br - For special accent cards"
+        },
+        "sections": {
+          "header": "CardHeader with title and optional action",
+          "content": "CardContent with main content",
+          "footer": "CardFooter for actions or metadata"
+        }
+      },
+
+      "input": {
+        "philosophy": "Clean, accessible inputs with clear focus states",
+        "base": {
+          "style": "h-9 w-full rounded-md border border-input bg-transparent px-3 py-1",
+          "shadow": "shadow-xs",
+          "transition": "transition-[color,box-shadow]"
+        },
+        "states": {
+          "focus": "focus-visible:ring-ring/50 focus-visible:ring-[3px] focus-visible:border-ring",
+          "error": "aria-invalid:border-destructive aria-invalid:ring-destructive/20",
+          "disabled": "disabled:opacity-50 disabled:cursor-not-allowed"
+        },
+        "darkMode": "dark:bg-input/30 dark:border-input",
+        "placeholder": "placeholder:text-muted-foreground"
+      },
+
+      "header": {
+        "philosophy": "Sticky navigation that provides context without distraction",
+        "style": {
+          "position": "sticky top-0 z-50",
+          "background": "bg-background/95 backdrop-blur-lg",
+          "border": "border-b border-transparent",
+          "shadow": "md:shadow (increases on scroll)"
+        },
+        "height": {
+          "mobile": "h-14 (56px)",
+          "desktop": "h-16 (64px)"
+        },
+        "navigation": {
+          "links": "buttonVariants({ variant: 'ghost' }) - Subtle navigation links",
+          "spacing": "gap-4 between nav items",
+          "mobile": "Full-screen overlay menu with backdrop blur"
+        }
+      },
+
+      "footer": {
+        "philosophy": "Clean, organized footer with subtle visual interest",
+        "style": {
+          "background": "bg-[radial-gradient(35%_128px_at_50%_0%,theme(backgroundColor.white/8%),transparent)]",
+          "border": "border-t",
+          "radius": "rounded-t-4xl md:rounded-t-6xl",
+          "accent": "Top border with subtle blur effect"
+        },
+        "layout": "Grid layout with logo, links, and social icons",
+        "spacing": "px-4 py-6 md:px-6"
+      },
+
+      "expandableCards": {
+        "philosophy": "Interactive cards that reveal content on selection with smooth animations",
+        "base": {
+          "style": "rounded-2xl border shadow-lg overflow-hidden",
+          "height": "h-[300px]",
+          "width": {
+            "collapsed": "200px",
+            "expanded": "500px"
+          }
+        },
+        "animation": {
+          "duration": "0.5s",
+          "easing": "Smooth spring-like transitions",
+          "content": "Blur-in effect (blur(5px) to blur(0px)) with opacity fade"
+        },
+        "interaction": {
+          "hover": "Cursor pointer, smooth width transition",
+          "selected": "Expands to reveal additional content panel",
+          "scroll": "Scroll-snap for horizontal card layouts"
+        }
+      },
+
+      "statsCards": {
+        "philosophy": "Animated metric cards that draw attention to key numbers",
+        "style": {
+          "base": "rounded-2xl border bg-gradient-to-br p-6",
+          "hover": "hover:scale-105 hover:shadow-xl",
+          "animation": "Staggered entrance animations with spring physics"
+        },
+        "layout": "Grid: 1 column mobile, 2 columns tablet, 4 columns desktop",
+        "elements": {
+          "icon": "Animated icon with rotation and scale",
+          "value": "Large, bold number with scale animation",
+          "label": "Uppercase, tracking-wide label",
+          "trend": "Badge with directional indicator"
+        }
+      },
+
+      "textAnimation": {
+        "philosophy": "Text that comes alive through carefully choreographed animations",
+        "types": {
+          "fadeIn": "Opacity and slight vertical movement",
+          "blurIn": "Blur effect (blur(10px) to blur(0px))",
+          "blurInUp": "Blur + upward slide",
+          "slideUp": "Vertical slide from below",
+          "slideLeft": "Horizontal slide from right",
+          "scaleUp": "Scale from 0.5 to 1 with spring physics"
+        },
+        "segments": {
+          "word": "Animate by word (default)",
+          "character": "Animate by character for dramatic effect",
+          "line": "Animate by line for paragraphs"
+        },
+        "timing": {
+          "stagger": "0.03s to 0.06s between segments",
+          "duration": "0.3s to 0.5s per segment",
+          "delay": "Configurable initial delay"
+        }
+      }
+    },
+
+    "animations": {
+      "philosophy": "Motion should feel natural, purposeful, and performant. Use spring physics for organic movement.",
+      "library": "Framer Motion (motion/react)",
+      "principles": {
+        "purpose": "Every animation should serve a purpose - feedback, guidance, or delight",
+        "performance": "Target 60fps, use transform and opacity for GPU acceleration",
+        "accessibility": "Respect prefers-reduced-motion, provide static fallbacks",
+        "timing": "Fast enough to feel responsive (200-300ms), slow enough to be perceived (not < 100ms)"
+      },
+      "easing": {
+        "default": "[0.4, 0.0, 0.2, 1] - Material Design ease-in-out",
+        "spring": {
+          "stiffness": "300-400 for responsive springs",
+          "damping": "30-45 for smooth, controlled motion",
+          "mass": "1 for standard elements"
+        },
+        "custom": "[0.22, 1, 0.36, 1] - Custom ease for premium feel"
+      },
+      "commonPatterns": {
+        "fadeIn": "Opacity 0 to 1 with optional translateY",
+        "scaleIn": "Scale 0.8-0.9 to 1 with spring physics",
+        "slideIn": "Translate from off-screen with opacity fade",
+        "blurIn": "Filter blur(10px) to blur(0px) with opacity",
+        "stagger": "Delay children animations by 0.05s-0.1s increments"
+      },
+      "interactions": {
+        "hover": "Subtle scale (1.05-1.1), shadow increase, color transition",
+        "click": "Brief scale down (0.95) then back up",
+        "focus": "Ring animation with 3px width",
+        "loading": "Smooth opacity transitions, skeleton screens"
+      }
+    },
+
+    "effects": {
+      "backdropBlur": {
+        "usage": "Headers, overlays, modals",
+        "intensity": "backdrop-blur-lg (16px blur)",
+        "background": "bg-background/95 or bg-background/50 for transparency"
+      },
+      "gradients": {
+        "subtle": "bg-gradient-to-br from-background to-background/50",
+        "accent": "bg-gradient-to-br from-primary/10 via-transparent to-transparent",
+        "radial": "radial-gradient for footer and special sections"
+      },
+      "glassmorphism": {
+        "style": "Backdrop blur + semi-transparent background",
+        "usage": "Headers, floating elements, cards over media"
+      },
+      "smoothCursor": {
+        "philosophy": "Custom cursor that follows mouse with spring physics",
+        "style": "Custom SVG cursor with rotation based on velocity",
+        "interaction": "Scales down slightly on fast movement"
+      }
+    },
+
+    "responsiveDesign": {
+      "breakpoints": {
+        "sm": "640px - Small tablets",
+        "md": "768px - Tablets",
+        "lg": "1024px - Small desktops",
+        "xl": "1280px - Desktops",
+        "2xl": "1536px - Large desktops"
+      },
+      "approach": "Mobile-first - Design for mobile, enhance for larger screens",
+      "patterns": {
+        "navigation": "Hamburger menu on mobile, horizontal nav on desktop",
+        "grid": "1 column mobile, 2-4 columns tablet, 4+ columns desktop",
+        "typography": "Smaller text on mobile, larger on desktop",
+        "spacing": "Tighter spacing on mobile, more generous on desktop",
+        "containers": "Full width mobile, max-width containers on desktop"
+      }
+    },
+
+    "accessibility": {
+      "colorContrast": "WCAG AA minimum, AAA where possible",
+      "focusStates": "Visible focus rings (3px) on all interactive elements",
+      "reducedMotion": "Respect prefers-reduced-motion, disable animations when requested",
+      "keyboardNavigation": "All interactive elements keyboard accessible",
+      "ariaLabels": "Proper ARIA labels for screen readers",
+      "semanticHTML": "Use proper HTML elements (nav, header, main, footer, etc.)"
+    },
+
+    "implementation": {
+      "framework": "Next.js with React",
+      "styling": "Tailwind CSS with custom theme configuration",
+      "animations": "Framer Motion (motion/react)",
+      "colorSystem": "CSS custom properties with OKLCH color space",
+      "themeToggle": "System preference detection with manual override",
+      "utilities": {
+        "cn": "Utility function for conditional class names (clsx + tailwind-merge)",
+        "variants": "class-variance-authority for component variants"
+      }
+    },
+
+    "designTokens": {
+      "summary": "All design decisions are tokenized through CSS custom properties and Tailwind config",
+      "customProperties": "Defined in globals.css, accessible via var(--property-name)",
+      "tailwindIntegration": "Tokens mapped to Tailwind utilities for consistent usage",
+      "themeAware": "All tokens automatically adapt to light/dark mode"
+    },
+
+    "guidelines": {
+      "whenCreatingComponents": [
+        "Use semantic HTML elements",
+        "Implement proper focus states",
+        "Add hover and active states",
+        "Respect reduced motion preferences",
+        "Ensure proper color contrast",
+        "Use design tokens, not hardcoded values",
+        "Test in both light and dark modes",
+        "Make responsive by default",
+        "Add smooth transitions for state changes",
+        "Use spring animations for natural movement"
+      ],
+      "spacingRules": [
+        "Use spacing scale consistently (4px increments)",
+        "Maintain visual rhythm with consistent gaps",
+        "More spacing for major sections, less for related elements",
+        "Consider content density - don't overcrowd"
+      ],
+      "typographyRules": [
+        "Use Geist Sans for all UI text",
+        "Maintain clear hierarchy with size and weight",
+        "Keep line length readable (45-75 characters)",
+        "Use appropriate line height for content type",
+        "Reserve Geist Mono for code and technical content"
+      ],
+      "colorRules": [
+        "Always use semantic color tokens (primary, secondary, etc.)",
+        "Never hardcode colors - use theme-aware tokens",
+        "Test contrast ratios in both themes",
+        "Use muted colors for less important content",
+        "Reserve primary color for key actions"
+      ],
+      "animationRules": [
+        "Keep animations under 500ms for interactions",
+        "Use spring physics for natural movement",
+        "Stagger animations for lists and groups",
+        "Provide static fallbacks for reduced motion",
+        "Animate transform and opacity for performance"
+      ]
+    }
+  }
+}
+

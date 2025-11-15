@@ -87,8 +87,8 @@ Vibe Coding Isn’t Magic—Here’s How to Make  It  Work for You
       <div className="max-w-8xl mx-auto my-24 px-8 flex gap-18">
         {/* Sidebar */}
         <nav className="hidden md:block w-1/4 sticky top-30 self-start bg-gray-50 dark:bg-gray-900 p-4 rounded-lg shadow-md">
-          <h3 className="text-14 font-bold mb-6">Contents</h3>
-          <ul className="space-y-4 text-gray-700 dark:text-gray-300">
+          <h3 className="text-2xl font-bold mb-4">Contents</h3>
+          <ul className="space-y-4 text-gray-700  font-light leading-relaxed text-gray-900 dark:text-gray-300 max-w-3xl mx-autodark:text-gray-300">
             {sections.map((section) => (
               <li key={section.id}>
                 <a
@@ -108,7 +108,7 @@ Vibe Coding Isn’t Magic—Here’s How to Make  It  Work for You
 
           <section id="intro">
               <h3  className="text-3xl font-semibold mb-6">Intro</h3>
-            <p className="text-2xl mb-6">
+            <p className="text-2xl font-light leading-relaxed text-gray-900 dark:text-gray-300 max-w-3xl mx-auto">
               The term vibe coding originated as a playful remark from AI expert
               Andrej Karpathy, describing the state of fully trusting the flow—
               letting AI autocomplete wherever possible, and almost forgetting
@@ -144,7 +144,7 @@ Vibe Coding Isn’t Magic—Here’s How to Make  It  Work for You
           <section id="what-is">
              <h3  className="text-3xl font-semibold mb-6">What Is Vibe Coding?</h3>
            
-            <p className="text-2xl mb-6">
+            <p className="text-2xl font-light leading-relaxed text-gray-900 dark:text-gray-300 max-w-3xl mx-auto">
              Vibe coding, popularized by Andrej Karpathy, is a new way of developing software where developers guide AI assistants through natural language prompts to generate and refine code. It’s about focusing on the app’s goals and letting AI handle the repetitive coding details.
              <br></br> <br></br>
              Karpathy described it as “fully giving in to the vibes, embracing exponentials, and forgetting that the code even exists.” At CloudAGI, we view vibe coding as a powerful tool for quick prototyping and building simple apps, but one that still requires a solid understanding of software fundamentals to avoid fragile or insecure solutions.
@@ -168,7 +168,7 @@ Vibe Coding Isn’t Magic—Here’s How to Make  It  Work for You
 
           <section id="when-to-vibe">
             <h3 className="text-3xl font-semibold mb-6">When to Vibe Code</h3>
-            <p className="text-2xl mb-6">Vibe coding works best when the risks are low, and speed is more important than perfection. Ideal scenarios include:
+            <p className="text-2xl font-light leading-relaxed text-gray-900 dark:text-gray-300 max-w-3xl mx-auto">Vibe coding works best when the risks are low, and speed is more important than perfection. Ideal scenarios include:
 
 Personal scripts and automation: Quick tasks like file organization or batch renaming.<br></br><br></br>
 
@@ -186,7 +186,7 @@ Personal scripts and automation: Quick tasks like file organization or batch ren
 
           <section id="when-not-to-vibe">
             <h3 className="text-3xl font-semibold mb-6">When Not to Vibe Code</h3>
-            <p className="text-2xl mb-6">While vibe coding can speed up development in many cases, it’s important to avoid it in situations where correctness, security, and reliability are critical. Avoid vibe coding for:
+            <p className="text-2xl font-light leading-relaxed text-gray-900 dark:text-gray-300 max-w-3xl mx-auto">While vibe coding can speed up development in many cases, it’s important to avoid it in situations where correctness, security, and reliability are critical. Avoid vibe coding for:
 
 Payment and financial systems: Handling sensitive transactions requires secure, tested code to prevent fraud and data breaches.
 
@@ -215,7 +215,7 @@ Payment and financial systems: Handling sensitive transactions requires secure, 
 
           <section id="real-risks">
             <h3 className="text-3xl font-semibold mb-6">Real-World Risks</h3>
-            <p className="text-2xl mb-6">Vibe coding can be tempting, but it carries real risks if used carelessly. AI-generated code often lacks awareness of security, scalability, and maintainability:
+            <p className="text-2xl font-light leading-relaxed text-gray-900 dark:text-gray-300 max-w-3xl mx-auto">Vibe coding can be tempting, but it carries real risks if used carelessly. AI-generated code often lacks awareness of security, scalability, and maintainability:
 
 <br></br><br></br><b>Security vulnerabilities: </b>Common issues include SQL injection flaws, storing passwords in plain text, and exposing sensitive data in local storage—problems that AI may introduce when coding without proper context.
 
@@ -241,7 +241,7 @@ Payment and financial systems: Handling sensitive transactions requires secure, 
 </section>
           <section id="tips">
             <h3 className="text-3xl font-semibold mb-6">Tips for Responsible Vibe Coding</h3>
-            <p className="text-2xl mb-6"> To harness the power of vibe coding while avoiding common pitfalls, follow these best practices:
+            <p className="text-2xl font-light leading-relaxed text-gray-900 dark:text-gray-300 max-w-3xl mx-auto"> To harness the power of vibe coding while avoiding common pitfalls, follow these best practices:
 
 <br></br><br></br><b>Break work into small, testable units: </b>Ask AI for focused tasks rather than entire applications to keep control and simplify debugging.
 
@@ -262,7 +262,7 @@ Payment and financial systems: Handling sensitive transactions requires secure, 
 
           <section id="conclusion">
             <h3 className="text-3xl font-semibold mb-6">Conclusion</h3>
-            <p className="text-2xl mb-6">Vibe coding is transforming how we build software—accelerating development, reducing repetitive work, and democratizing access to creating applications. When used responsibly, it allows developers and non-developers alike to turn ideas into functioning products quickly with the help of AI.
+            <p className="text-2xl font-light leading-relaxed text-gray-900 dark:text-gray-300 max-w-3xl mx-auto">Vibe coding is transforming how we build software—accelerating development, reducing repetitive work, and democratizing access to creating applications. When used responsibly, it allows developers and non-developers alike to turn ideas into functioning products quickly with the help of AI.
 
 <br></br><br></br>However, it’s crucial to remember that vibe coding is not a magic wand. Its success depends on knowing when and how to leverage AI tools, and—just as important—when to step back and apply traditional development rigor. Mindless prompting or overreliance can lead to insecure, fragile, and unscalable systems.
 
